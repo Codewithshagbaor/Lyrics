@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <h1>Enter Song Title</h1>
+    <input type="text" name="song_title" placeholder="Song Title" /><br><br>
+    <button type="submit">Search</button>
+  </form>
+</div>
+
+<div>{{lyrics}}</div>
+
+{% endblock %}
