@@ -1,19 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GetLyric</title>
-</head>
+  <title>Upload - SnapShots</title>
+  <!-- Reuse the CSS code from the homepage, full image view page, and login page -->
+  <style>
+    /* Add some styling for the body and menu bar */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #eee;
+    }
+    .menu {
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      color: white;
+      font-size: 20px;
+    }
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 0 10px;
+    }
+    .menu a:hover {
+      text-decoration: underline;
+    }
+    /* Add some styling for the post form */
+    .post-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 90vh;
+    }
+    .post-form form {
+      width: 400px;
+      margin: 20px;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    .post-form form label,
+    .post-form form input,
+    .post-form form button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    .post-form form input[type="text"],
+    .post-form form input[type="file"] {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    .post-form form button {
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .post-form form button:hover {
+      background-color: #555;
+    }
+        /* Add some styling for the floating icon */
+    .github-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #333;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease-in-out;
+    }
+    .github-icon:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .github-icon img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+        /* added output styling */
+    .output {
+    margin: 5px 0; /* add some margin */
+    padding: 20px; /* add some padding */
+    border: 1px solid #ccc; /* add a border */
+    border-radius: 5px; /* round the corners of the border */
+    text-align: left; /* align the text to the left */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* add a subtle drop shadow */
+    background: #eee; /* add a light grey background color */
+        }    
+  </style>
 <body>
-  <div>
+  <!-- Add a menu bar with a login and upload button -->
+  <div class="menu">
     <a href="{% url 'index' %}">Home</a>
   </div>
-  <hr>
   {% block content %}
 
   {% endblock %}
   <script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
-</body>
-</html>
+  <a href="https://github.com/Codewithshagbaor" target="_blank" class="github-icon">
+    <img src="https://avatars.githubusercontent.com/u/67190277?v=4" alt="GitHub Icon">
+  </a>
+  
+  </body>
+  </html>
