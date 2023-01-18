@@ -1,14 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
-<div>
-  <form action="" method="POST">
+<div class="post-form">
+  <form method="POST">
     {% csrf_token %}
-    <h1>Enter Song Title</h1>
-    <input type="text" name="song_title" placeholder="Song Title" /><br><br>
+    <label for="caption">Song Title:</label>
+    <input type="text" name="song_title" placeholder="Shape of You" required>
+    <label for="caption">Song Title:</label>
+    <input type="text" name="artist" placeholder="Ed Sheeran" required>
     <button type="submit">Search</button>
   </form>
+  {% if lyrics %}
+  <div  class="output">
+    <p class="mb-auto">{{lyrics}}</p>
+  </div>
+  {% endif %}
 </div>
 
-<div>{{lyrics}}</div>
+
 
 {% endblock %}
