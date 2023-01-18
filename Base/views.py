@@ -6,7 +6,7 @@ def index(request):
     
     song_title = request.POST.get('song_title')
     
-    api_key = '3f6aed992212100966b2d06b87df667f'
+    api_key = 'Your Key'
     api_url = f'https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?q_track={song_title}&apikey={api_key}'
     
     response = requests.get(api_url)
